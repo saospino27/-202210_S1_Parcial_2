@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <img src="https://www.thoughtco.com/thmb/sTefARVqR4rAwp8px9bBBrBTSo4=/1333x1000/smart/filters:no_upscale()/the-seven-wonders-of-the-world-4147695_FINAL-9d082e2ae1964b87a8640e3a4cc3c601.png" alt="image" class="center">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let m of maravillas">
+          <td>
+            <dd>{{m.id}}</dd>
+          </td>
+          <td>
+            <dd>{{m.name}}</dd>
+          </td>
+          <td>
+            <dd>{{m.country}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+    <div *ngIf="selected">
+      <app-maravilla-detail [maravillaDetail]="selectedMaravilla"></app-maravilla-detail>
+</div>
+  </div>
